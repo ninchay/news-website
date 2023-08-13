@@ -1,0 +1,29 @@
+:root {
+    font-size: 16px; 
+}
+
+.backgroundSmall {
+    width: 255px;
+    height: 255px;
+    flex-shrink: 0;
+    background-color: #0D47A1;
+    position: relative;
+}
+
+.contextSmall {
+    position: absolute;
+    background: rgba(9, 53, 123, 0.90);
+    opacity: 0.9;
+    height: 107px;
+    bottom: 0;
+    width: 100%;
+}
+
+.titleSmall {
+    color: #FFF;
+    font-family: Georgia;
+    font-size: 1.125rem; 
+    font-style: normal;
+    font-weight: 700;
+    margin: 0.625rem;
+}

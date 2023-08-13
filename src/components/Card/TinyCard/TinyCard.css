@@ -1,0 +1,18 @@
+:root {
+    font-size: 16px; 
+}
+
+.backgroundTiny {
+    background-color: #09357B;
+    width: 255px;
+    height: 138px; 
+}
+
+.titleTiny {
+    margin: 0.625rem; 
+    color: #FFF;
+    font-family: Georgia;
+    font-size: 1.125rem; 
+    font-style: normal;
+    font-weight: 700;
+}
