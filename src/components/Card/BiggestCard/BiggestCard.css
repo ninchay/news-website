@@ -1,0 +1,36 @@
+.background {
+    width: 540px;
+    height: 423px;
+    flex-shrink: 0;
+    position: relative;
+    background-size: cover; 
+    background-position: center;
+    background: #0D47A1;
+}
+
+.context {
+    position: absolute;
+    background: rgba(9, 53, 123, 0.90);
+    opacity: 0.9;
+    height: 136px;
+    bottom: 0; 
+    width: 100%;
+}
+
+.title {
+    color: #FFF;
+    font-family: Georgia;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.body{
+    color: #FFF;
+    font-family: var(--font-search);
+    font-size: 14px;
+    margin: 5px 10px 17px 11px;
+    max-height: 70px; /*need to change na ja*/
+    overflow: hidden; 
+}

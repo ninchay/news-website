@@ -1,0 +1,53 @@
+:root {
+    font-size: 16px; 
+}
+.backgroundMed {
+    width: 350px;
+    height: 350px;
+    flex-shrink: 0;
+    position: relative;
+    background-size: cover; 
+    background-position: center;
+    background-color: #0D47A1;
+}
+
+.contextMed {
+    position: absolute;
+    background: rgba(9, 53, 123, 0.90);
+    opacity: 0.9;
+    height: 134px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.titleMed {
+    color: #FFF;
+    font-family: Georgia;
+    font-size: 20px; 
+    font-style: normal;
+    font-weight: 700;
+    margin: 10px;
+    letter-spacing: 0.07px;
+}
+
+/* .bodyMed{
+    color: #FFF;
+    font-family: var(--font-search);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    margin-left: 9px;
+    margin-right: 14px;
+    overflow: hidden;
+    -webkit-line-clamp: auto;
+    -webkit-box-orient: vertical;
+} */
+.contextMed p{
+    display: -webkit-box;
+    max-width: 200px;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
