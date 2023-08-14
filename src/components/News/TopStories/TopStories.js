@@ -26,17 +26,16 @@ function TopStories({ setOrder,order }) {
               console.log(error);
           });
   }, [order]);
-
-  console.log(order)
   
-  // if (newsDatas.length === 0) {
-  //     return <Pending/>;
-  // }
+if (newsDatas.length === 0) {
+  return <Pending/>;
+}
+
 return (
 <>
-<div className="top">
+<div className="topContent">
   <div className="topStories">Top stories</div>
-  <Dropdown onSelectOrder={handleSelectOrder}/>
+  {/* <Dropdown onSelectOrder={handleSelectOrder}/> */}
 </div>
         <div className="topStoriesCombined">
           {newsDatas[0] 

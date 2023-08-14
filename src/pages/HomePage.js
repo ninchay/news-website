@@ -12,16 +12,12 @@ function HomePage() {
 
 return (
 <div>
-    <Header/> 
-    <div style={{
-      maxWidth: '1110px',
-      marginLeft:'auto',
-      marginRight:'auto'
-      }}>
-        <TopStories setOrder={setOrder} order={order}/>
-        <Sport setOrder={setOrder} order={order}/>
+      <Header /> 
+    <div className='contextHomepage'>
+      <TopStories setOrder={setOrder} order={order}/>
+      <Sport setOrder={setOrder} order={order}/>
     </div>
-    <Footer />
+      <Footer />
 </div>
   )
 }

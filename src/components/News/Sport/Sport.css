@@ -21,9 +21,10 @@
         display: flex;
         flex-wrap: wrap; 
         align-items: center;
-        margin-left: 13px;
-        margin-right: 13px;
-        margin-top: 5px;
+        margin: 5px;
+    }
+    .sportsTitle{
+        font-size: 27px;
     }
     .mediumCardContainerSport{
         margin-top: 5px;

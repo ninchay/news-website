@@ -5,6 +5,8 @@ import sevenPeaksPic from '../../../Assets/Images/Logo_White.png'
 function BiggestCard({title,body,image,onClick}) {
   const cardStyle = {
     backgroundImage: `url(${image || sevenPeaksPic})`, // Set the background image
+    backgroundSize: 'contain', 
+    backgroundRepeat: 'noRepeat',
   };
 
 

@@ -24,7 +24,9 @@ return (
             {parse(data.fields.body)}
         </div>
         <div className='thumbnail'>
-        <img src={data.fields.thumbnail} alt="" />
+            {data.fields.thumbnail !== "" && (
+            <img src={data.fields.thumbnail} alt="pic" />
+            )}
         </div>
     </div>
     

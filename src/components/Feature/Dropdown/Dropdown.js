@@ -19,7 +19,7 @@ return (
   </div>
   {isOpen && (
     <div className='dropdownList'>
-      <div className='list' onClick={() => handleOrderClick('oldest')}><p>Oldest</p></div>
+      <div className='list' onClick={() => handleOrderClick('oldest')}><p>Oldest first</p></div>
     </div>
   )}
 </div>

@@ -45,3 +45,15 @@
     height: 41px;
     margin-bottom: 11px;
 }
+@media(max-width: 480px){
+    .selected p{
+        font-size: 12px;
+        width: max-content;
+        margin: 0px;
+    }
+    .selected{
+        width: 120px;
+        height: 22px;
+    }
+
+}

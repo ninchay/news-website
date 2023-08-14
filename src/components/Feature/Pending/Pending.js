@@ -1,11 +1,10 @@
 import React from 'react'
 import './Pending.css'
-import circlePending from '../../../Assets/Images/Circular.svg'
-
+import circle from '../../../Assets/Images/circlePending.gif'
 function Pending() {
 return (
 <div className='pending'>
-   <img src={circlePending} alt="pendingIconCircle"/>
+   <img src={circle} alt="pendingIconCircle"/>
 </div>
 )
 }

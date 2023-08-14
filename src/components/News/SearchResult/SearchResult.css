@@ -1,7 +1,7 @@
 .header {
     color: rgba(0, 0, 0, 0.87);
     font-family: Georgia;
-    font-size: 3rem;
+    font-size: 48px;
     line-height: 3.0625rem;
     font-style: normal;
     font-weight: 700;
@@ -15,5 +15,20 @@
     margin: 31px 30px 0 0; 
     width: calc(33.33% - 30px);
     box-sizing: border-box; 
+}
+
+@media (max-width:480px){
+    .header{
+        font-size: 27px;
+        margin: 0px;
+    }
+    .bigSearch {
+        max-width: 380px;
+    }
+    .searchResultNews {
+        display: inline-block;
+        margin: 10px 80px 0 10px; 
+    }
+    
 }
 

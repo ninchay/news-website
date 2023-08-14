@@ -8,6 +8,8 @@
     flex-shrink: 0;
     background-color: #0D47A1;
     position: relative;
+    background-size:contain;
+    background-repeat: no-repeat; 
 }
 
 .contextSmall {

@@ -3,3 +3,8 @@
     height: 15.1875rem;
     background: #09357B;
 }
+@media (max-width: 480px){
+    .footer{
+        max-width: 100%;
+    }
+}

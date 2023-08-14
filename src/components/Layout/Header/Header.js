@@ -11,7 +11,6 @@ function Header({setTypeText}) {
     setSearchBox(!searchBox);
   };
   //Text on search box
-
   const handleTextChange =(e)=>{
     setTypeText(e.target.value);
   };

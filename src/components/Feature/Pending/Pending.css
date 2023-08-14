@@ -1,20 +1,17 @@
 .pending{
-    margin: 14.63rem 42rem 88.31rem;
-    animation: rotation infinite 3s linear;
+    margin: 14.63rem 0rem 88.31rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .pendingIcon{
-    width: 6rem;
-    height: 6rem;
-    animation: animName 2s linear infinite;
-}
-@keyframes rotation{
-    from{
-        transform:rotate(0deg);
-    }
-
-    to{
-        transform:rotate(360deg);
-    }
+    width: 96px;
+    height: 96px;
 }
 
-
+@media (max-width:480){
+    .pendingIcon{
+        width: 30px;
+        height: 30px;
+    }
+}
