@@ -13,9 +13,11 @@
 }
 .selected p{
     margin-left: 5px;
+    cursor: pointer;
 }
 .arrow{
     margin-left: 129px;
+    cursor: pointer;
 }
 .arrow.active svg{
     cursor: pointer;

@@ -16,4 +16,4 @@ function MediumCard({titleMed,bodyMed,image}) {
   )
 }
 
-export default MediumCard
+export default MediumCard;

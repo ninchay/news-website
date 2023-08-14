@@ -10,36 +10,33 @@ import TinyCard from "../../Card/TinyCard/TinyCard";
 import { Link } from "react-router-dom";
 
 
-function TopStories() {
+function TopStories({ setOrder,order }) {
   //api fetch for section=news
+
+  const handleSelectOrder = (selectedOrder) => {
+    setOrder(selectedOrder);
+  };
   const [newsDatas, setNewsData] = useState([]);
   useEffect(() => {
-      getNews()
+      getNews(order)
           .then((data) => {
               setNewsData(data.response.results);
           })
           .catch((error) => {
               console.log(error);
           });
-  }, []);
-if (newsDatas.length === 0) {
-    return <Pending/>;
-}
+  }, [order]);
 
-// const handleClick=(data)=>{
-//   console.log("ehjej")
-//   return (
-//     <Link to={{pathname:"/article",
-//     state:{data}
-//   }}/>
-//   )
-// }
-
+  console.log(order)
+  
+  if (newsDatas.length === 0) {
+      return <Pending/>;
+  }
 return (
 <>
 <div className="top">
   <div className="topStories">Top stories</div>
-  <Dropdown />
+  <Dropdown onSelectOrder={handleSelectOrder}/>
 </div>
         <div className="topStoriesCombined">
           {newsDatas[0] 
@@ -69,7 +66,7 @@ return (
             <SmallCard titleSmall={newsDatas[3].webTitle} />
           </Link>
 
-          <Link to="/article" state={{data:newsDatas[0]}}>
+          <Link to="/article" state={{data:newsDatas[4]}}>
             <TinyCard titleTiny={newsDatas[4].webTitle} />
           </Link>
         </div>
@@ -79,11 +76,13 @@ return (
         {newsDatas.map((newsData,index)=>{
             if (index>=5 && index<=7){
               return (
-                <MediumCard 
-                titleMed={newsData.webTitle}
-                bodyMed={newsData.fields.bodyText}
-                image={newsData.fields.thumbnail}
-                />
+                <Link to="/article" state={{data:newsDatas[index]}}>
+                  <MediumCard 
+                  titleMed={newsData.webTitle}
+                  bodyMed={newsData.fields.bodyText}
+                  image={newsData.fields.thumbnail}
+                  />
+                </Link>
               )
             }
             return null

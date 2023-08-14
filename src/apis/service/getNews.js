@@ -1,5 +1,5 @@
-const getNews = () => {
-    return fetch(`https://content.guardianapis.com/search?section=news&show-fields=all&show-elements=all&api-key=${process.env.REACT_APP_GUARDIAN_API_KEY}`)
+const getNews = (order) => {
+    return fetch(`https://content.guardianapis.com/search?section=news&order-by=${order}&show-fields=all&show-elements=all&api-key=${process.env.REACT_APP_GUARDIAN_API_KEY}`)
     .then((res) => res.json())
     .then((data) => {
         return data; 

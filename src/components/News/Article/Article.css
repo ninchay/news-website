@@ -1,7 +1,7 @@
-.article{
+/* .article{
     display: flex;
     flex-direction: row;
-}
+} */
 .publicationDate{
     margin-top: 111px;
     margin-bottom: 10px;
@@ -48,8 +48,12 @@
     margin-bottom: 293px;
 }
 .thumbnail{
-    margin-top: 387px;
     margin-left: 30px;
     width: 445px;
     height: 267px;
+}
+.picNText{
+    display: flex;
+    flex-direction: row;
+    margin-top: 0px;
 }

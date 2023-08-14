@@ -5,5 +5,15 @@
     line-height: 3.0625rem;
     font-style: normal;
     font-weight: 700;
-    margin: 2.75rem 0 2.37rem 10.31rem;
+    margin: 2.75rem 0 2.37rem 0rem;
 }
+.bigSearch {
+    max-width: 1100px;
+}
+.searchResultNews {
+    display: inline-block;
+    margin: 31px 30px 0 0; 
+    width: calc(33.33% - 30px);
+    box-sizing: border-box; 
+}
+

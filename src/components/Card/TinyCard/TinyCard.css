@@ -9,10 +9,12 @@
 }
 
 .titleTiny {
-    margin: 0.625rem; 
+    padding: 10px;
     color: #FFF;
     font-family: Georgia;
-    font-size: 1.125rem; 
+    font-size: 18px;
     font-style: normal;
     font-weight: 700;
+    line-height: 27px; 
+    letter-spacing: 0.063px;
 }

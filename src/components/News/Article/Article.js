@@ -7,7 +7,7 @@ function Article(props) {
 
 return (
 <div className='article'>
-    <div className='text'>
+
         <div className='publicationDate'>
             {data.webPublicationDate}
         </div>
@@ -19,15 +19,15 @@ return (
         <div className='headline'>
             {data.fields.headline}
         </div>
-
+    <div className='picNText'>
         <div className='bodyText'>
             {parse(data.fields.body)}
         </div>
+        <div className='thumbnail'>
+        <img src={data.fields.thumbnail} alt="" />
+        </div>
     </div>
-
-    <div className='thumbnail'>
-        {data.fields.thumbnail}
-    </div>
+    
 </div>
   )
 }

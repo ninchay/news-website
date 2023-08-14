@@ -1,15 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Header from '../components/Layout/Header/Header'
 import Footer from '../components/Layout/Footer/Footer'
 import SearchResult from '../components/News/SearchResult/SearchResult'
 
 function SearchPage({newsData, sportData}) {
+    const [typeText, setTypeText]=useState('');
 return (
 <div>
-    <Header/>
+    <Header setTypeText={setTypeText}/>
     <div style={{maxWidth:'1110px',marginLeft:'auto',marginRight:'auto'}}>
-        <SearchResult/>
-        
+        <SearchResult typeText={typeText}/>
     </div>
     <Footer/>
 </div>
