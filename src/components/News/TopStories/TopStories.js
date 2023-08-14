@@ -29,9 +29,9 @@ function TopStories({ setOrder,order }) {
 
   console.log(order)
   
-  if (newsDatas.length === 0) {
-      return <Pending/>;
-  }
+  // if (newsDatas.length === 0) {
+  //     return <Pending/>;
+  // }
 return (
 <>
 <div className="top">
