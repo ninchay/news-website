@@ -16,3 +16,16 @@
     margin-top: 30px;
     margin-bottom: 105px;
 }
+@media (max-width: 480px){
+    .sportNews{
+        display: flex;
+        flex-wrap: wrap; 
+        align-items: center;
+        margin-left: 13px;
+        margin-right: 13px;
+        margin-top: 5px;
+    }
+    .mediumCardContainerSport{
+        margin-top: 5px;
+    }
+}

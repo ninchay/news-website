@@ -30,10 +30,45 @@
     justify-content: space-between;
     flex-direction: column;
 }
+.twoNthree{
+    display: flex;
+    flex-direction: row;
+}
+
 .mediumCardContainer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     margin-top: 30px;
+}
 
+@media (max-width: 480px) {
+    .topStoriesCombined {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .twoNthree{
+        display: flex;
+        flex-direction: row;
+    }
+    .rowTwo, .rowThree{
+        flex-direction: column;
+        margin: 3px;
+    }
+    .mediumCardContainer{
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: left;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5px;
+    }
+    .mediumCardList{
+        box-sizing: border-box; 
+        display: inline-block;
+        margin-inline-end: 5px;
+    }
 }

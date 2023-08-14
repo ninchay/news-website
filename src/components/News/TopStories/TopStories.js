@@ -51,25 +51,27 @@ return (
           :
           null
           }
-        <div className="rowTwo">
-          <Link to="/article" state={{data:newsDatas[1]}}>
-            <SmallCard 
-            titleSmall={newsDatas[1].webTitle} 
-            />
-          </Link>
-          <Link to="/article" state={{data:newsDatas[2]}}>
-            <TinyCard titleTiny={newsDatas[2].webTitle} />
-          </Link>
-        </div>
-        <div className="rowThree">
-          <Link to="/article" state={{data:newsDatas[3]}}>
-            <SmallCard titleSmall={newsDatas[3].webTitle} />
-          </Link>
+          <div className="twoNthree">
+          <div className="rowTwo">
+            <Link to="/article" state={{data:newsDatas[1]}}>
+              <SmallCard 
+              titleSmall={newsDatas[1].webTitle} 
+              />
+            </Link>
+            <Link to="/article" state={{data:newsDatas[2]}}>
+              <TinyCard titleTiny={newsDatas[2].webTitle} />
+            </Link>
+          </div>
+          <div className="rowThree">
+            <Link to="/article" state={{data:newsDatas[3]}}>
+              <SmallCard titleSmall={newsDatas[3].webTitle} />
+            </Link>
 
-          <Link to="/article" state={{data:newsDatas[4]}}>
-            <TinyCard titleTiny={newsDatas[4].webTitle} />
-          </Link>
-        </div>
+            <Link to="/article" state={{data:newsDatas[4]}}>
+              <TinyCard titleTiny={newsDatas[4].webTitle} />
+            </Link>
+          </div>
+          </div>
       </div>
 
       <div className="mediumCardContainer">
@@ -77,11 +79,13 @@ return (
             if (index>=5 && index<=7){
               return (
                 <Link to="/article" state={{data:newsDatas[index]}}>
-                  <MediumCard 
-                  titleMed={newsData.webTitle}
-                  bodyMed={newsData.fields.bodyText}
-                  image={newsData.fields.thumbnail}
-                  />
+                  <div className='mediumCardList'>
+                    <MediumCard 
+                    titleMed={newsData.webTitle}
+                    bodyMed={newsData.fields.bodyText}
+                    image={newsData.fields.thumbnail}
+                    />
+                  </div>
                 </Link>
               )
             }

@@ -6,8 +6,6 @@ import Pending from "../../Feature/Pending/Pending";
 import { Link } from "react-router-dom";
 
 function Sport({ setOrder,order }) {
-    //dropdown order state
-
     //api fetch for section=sport
     const [sportDatas,setSportDatas] = useState([]);
     const [page,setPage]=useState(1)
@@ -34,11 +32,12 @@ return (
     <div className="sportNews">
         {sportDatas.map((sportData,index)=>{
             return (
-                <div key={index}>
+                <div className="mediumCardContainerSport" key={index}>
                     <Link  to="/article" state={{data:sportDatas[index]}}>
                         <MediumCard 
                         titleMed={sportData.webTitle}
                         image={sportData.fields.thumbnail}
+                        className='mediumCardListSport'
                         />
                     </Link>
                 </div>

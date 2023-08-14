@@ -6,6 +6,7 @@ import getSports from '../apis/service/getSports';
 import TopStories from '../components/News/TopStories/TopStories';
 import Sport from '../components/News/Sport/Sport';
 import '../styles/HomePage.css'
+
 function HomePage() {
   const [order, setOrder] = useState('newest');
 

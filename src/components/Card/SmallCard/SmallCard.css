@@ -22,8 +22,21 @@
 .titleSmall {
     color: #FFF;
     font-family: Georgia;
-    font-size: 1.125rem; 
+    font-size: 18px; 
     font-style: normal;
     font-weight: 700;
-    margin: 0.625rem;
+    margin: 10px;
+}
+@media (max-width: 480px){
+    .backgroundSmall{
+        width: 150px;
+        height: 150px;
+    }
+    .contextSmall{
+        height: 60px;
+    }
+    .titleSmall{
+        font-size: 14.5px;
+        margin: 5px;
+    }
 }

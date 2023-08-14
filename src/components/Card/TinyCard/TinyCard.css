@@ -18,3 +18,14 @@
     line-height: 27px; 
     letter-spacing: 0.063px;
 }
+
+@media(max-width: 480px){
+    .backgroundTiny{
+        width: 150px;
+        height: 80px; 
+    }
+    .titleTiny{
+        font-size: 14px;
+        margin: 5px;
+    }
+}

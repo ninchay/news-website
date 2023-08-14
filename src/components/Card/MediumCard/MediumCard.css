@@ -30,24 +30,28 @@
     margin: 10px;
     letter-spacing: 0.07px;
 }
-
-/* .bodyMed{
-    color: #FFF;
-    font-family: var(--font-search);
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    letter-spacing: 0.1px;
-    margin-left: 9px;
-    margin-right: 14px;
-    overflow: hidden;
-    -webkit-line-clamp: auto;
-    -webkit-box-orient: vertical;
-} */
 .contextMed p{
     display: -webkit-box;
     max-width: 200px;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+@media (max-width: 480px){
+    .backgroundMed{
+        width: 180px;
+        height: 180px;
+    }
+    .contextMed{
+        height: 80px;
+    }
+    .titleMed{
+        font-size: 15px; 
+        margin: 5px;
+    }
+    .bodyMed{
+        margin: 0px 1px 0px 1px;
+        font-size: 13px;
+        color: #FFF;
+    }
 }
