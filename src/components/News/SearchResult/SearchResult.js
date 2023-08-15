@@ -3,38 +3,41 @@ import './SearchResult.css'
 import getSearch from '../../../apis/service/getSearch';
 import MediumCard from '../../Card/MediumCard/MediumCard'
 import { Link } from 'react-router-dom';
-import Pending from '../../Feature/Pending/Pending';
-import ReachScrolling from '../../Feature/ReachScrolling/ReachScrolling';
+import DdItem from '../../Feature/Dropdown/DdItem';
 
 function SearchResult({typeText}) {
   const [searchDatas, setSearchDatas] = useState([]);
   const [pageSearch,setPageSearch]=useState(1);
+  const [orderSearch, setOrderSearch] = useState('newest');
   const [currentSearch, setCurrentSearch]=useState(typeText);
   const loading=useRef(false)
 
+  const handleSelectOrder = (selectedOrder) => {
+    setOrderSearch(selectedOrder);
+  };
   useEffect(() => {
     if (typeText.length > 0) {
     const timeOutId = setTimeout(() => 
     {if(typeText===currentSearch){
       setCurrentSearch(typeText);
-      getSearchData(typeText,pageSearch);
+      getSearchData(typeText,pageSearch,orderSearch);
     }
     else {
       setSearchDatas([]);
       setPageSearch(1);
-      getSearchData(typeText,1) //delete old data
+      getSearchData(typeText,1,orderSearch) //delete old data
       setCurrentSearch("")
     }
     } 
     , 500);
     return () => clearTimeout(timeOutId);
     }
-  }, [typeText]);
+  }, [typeText, orderSearch]);
 
-  function getSearchData(searchText,page){
+  function getSearchData(searchText,page,orderSearch){
     if(!loading.current){
       loading.current=true
-      getSearch(searchText,page)
+      getSearch(searchText,page,orderSearch)
       .then(data => {
         setSearchDatas(prevData=>[...prevData,...data.response.results]);
         setPageSearch(page+1)
@@ -44,7 +47,6 @@ function SearchResult({typeText}) {
       }).finally(()=>{loading.current=false});
     }
   }
-  console.log(searchDatas)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,7 +56,7 @@ function SearchResult({typeText}) {
 
         const hasReachedBottom = offsetHeight - (innerHeight + scrollTop) <= 5;
         if(hasReachedBottom)  {
-          getSearchData(typeText,pageSearch)
+          getSearchData(typeText,pageSearch,orderSearch)
         }
       };
 
@@ -62,11 +64,14 @@ function SearchResult({typeText}) {
 
 
     return () => window.removeEventListener("scroll", handleScroll);
-    }, [typeText,pageSearch]);
+    }, [typeText,pageSearch,orderSearch]);
 
   return (
   <div>
-    <h1 className='header'>Search results</h1>
+    <div className='topMostSearch'>
+      <h1 className='header'>Search results</h1>
+      <DdItem  onSelectOrder={handleSelectOrder}/>
+    </div>
     <div className='bigSearch'>
       {searchDatas.map((searchData,index)=>{
         return(

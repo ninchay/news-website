@@ -7,7 +7,6 @@ function Article(props) {
 
 return (
 <div className='article'>
-
         <div className='publicationDate'>
             {data.webPublicationDate}
         </div>
@@ -29,7 +28,6 @@ return (
             )}
         </div>
     </div>
-    
 </div>
   )
 }

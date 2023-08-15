@@ -5,6 +5,7 @@ function MediumCard({titleMed,bodyMed,image}) {
 
   const bgImage ={
     backgroundImage: `url(${image || sevenPeaksPic})`,
+
   }
   return (
     <div className='backgroundMed' style={bgImage}>

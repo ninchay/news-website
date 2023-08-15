@@ -3,15 +3,16 @@ import Header from '../components/Layout/Header/Header'
 import Footer from '../components/Layout/Footer/Footer'
 import SearchResult from '../components/News/SearchResult/SearchResult'
 
-function SearchPage({newsData, sportData}) {
+function SearchPage() {
     const [typeText, setTypeText]=useState('');
+    
 return (
-<div>
+<div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
     <Header setTypeText={setTypeText}/>
     <div style={{maxWidth:'1110px',marginLeft:'auto',marginRight:'auto'}}>
-        <SearchResult typeText={typeText}/>
+        <SearchResult typeText={typeText} />
     </div>
-    <Footer/>
+    <Footer style={{ marginTop: 'auto' }}/>
 </div>
 )
 }

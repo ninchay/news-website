@@ -1,11 +1,9 @@
-.background {
+.backgroundBig {
     width: 540px;
     height: 423px;
-    flex-shrink: 0;
     position: relative;
-    background-size: fill; 
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
     background: #0D47A1;
 }
 
@@ -37,9 +35,12 @@
 }
 
 @media (max-width: 480px) {
-    .background{
+    .backgroundBig{
         width: 365px;
         height: 365px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
     }
     .context{
         height: 100px

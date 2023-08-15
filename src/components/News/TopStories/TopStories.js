@@ -2,17 +2,15 @@ import React,{ useState,useEffect } from "react";
 import "./TopStories.css";
 import getNews from "../../../apis/service/getNews";
 import Pending from "../../Feature/Pending/Pending";
-import Dropdown from "../../Feature/Dropdown/Dropdown";
+import DdItem from "../../Feature/Dropdown/DdItem";
 import BiggestCard from "../../Card/BiggestCard/BiggestCard";
 import MediumCard from "../../Card/MediumCard/MediumCard";
 import SmallCard from "../../Card/SmallCard/SmallCard";
 import TinyCard from "../../Card/TinyCard/TinyCard";
 import { Link } from "react-router-dom";
 
-
 function TopStories({ setOrder,order }) {
   //api fetch for section=news
-
   const handleSelectOrder = (selectedOrder) => {
     setOrder(selectedOrder);
   };
@@ -35,7 +33,7 @@ return (
 <>
 <div className="topContent">
   <div className="topStories">Top stories</div>
-  {/* <Dropdown onSelectOrder={handleSelectOrder}/> */}
+  <DdItem onSelectOrder={handleSelectOrder} className="dropdown"/>
 </div>
         <div className="topStoriesCombined">
           {newsDatas[0] 

@@ -10,7 +10,11 @@
     font-weight: 700;
     margin-top: 44px;
     margin-bottom: 30px;
-    margin-right: 579px
+    margin-right: 534.7px
+}
+.dropdown{
+    top: 5px;
+    left: 120px;
 }
 .topStoriesCombined{
     display: flex;
@@ -52,14 +56,14 @@
         margin-left: 5px;
     }
     .topStories{
-        font-size: 27px;
+        font-size: 23px;
         margin: 0px;
     }
     .topStoriesCombined {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .twoNthree{
         display: flex;
@@ -80,5 +84,8 @@
         box-sizing: border-box; 
         display: inline-block;
         margin-inline-end: 5px;
+    }
+    .dropdown{
+        margin-left: 40px;
     }
 }
