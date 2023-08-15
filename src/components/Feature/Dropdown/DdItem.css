@@ -54,7 +54,6 @@ button {
     width: 150px;
     height: 22px;
     font-size: 12px;
-    z-index: 1;
   }
   .dropdown-content {
     width: 150px;
