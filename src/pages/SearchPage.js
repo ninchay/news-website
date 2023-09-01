@@ -8,11 +8,11 @@ function SearchPage() {
     
 return (
 <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-    <Header setTypeText={setTypeText}/>
+    <Header setTypeText={setTypeText} typeText={typeText}/>
     <div style={{maxWidth:'1110px',marginLeft:'auto',marginRight:'auto'}}>
         <SearchResult typeText={typeText} />
     </div>
-    <Footer style={{ marginTop: 'auto' }}/>
+    <Footer/>
 </div>
 )
 }

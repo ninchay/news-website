@@ -51,13 +51,12 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin-top: 30px;
-        margin-bottom: 10px;
-        margin-left: 5px;
+        margin: 30px 5px 10px 5px;
     }
     .topStories{
         font-size: 23px;
         margin: 0px;
+        margin-top: 10px;
     }
     .topStoriesCombined {
         display: flex;

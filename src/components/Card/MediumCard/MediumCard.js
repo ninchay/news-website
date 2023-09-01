@@ -1,11 +1,13 @@
 import React from 'react'
 import './MediumCard.css'
-import sevenPeaksPic from '../../../Assets/Images/Logo_White.png'
+import guardianPic from '../../../Assets/Images/guardian.jpeg'
 function MediumCard({titleMed,bodyMed,image}) {
 
   const bgImage ={
-    backgroundImage: `url(${image || sevenPeaksPic})`,
-
+    backgroundImage: `url(${image || guardianPic})`,
+    backgroundSize: '100% 70%',
+    backgroundRepeat:'noRepeat',
+    backgroundColor:'#061f48',
   }
   return (
     <div className='backgroundMed' style={bgImage}>

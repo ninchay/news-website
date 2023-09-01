@@ -10,7 +10,7 @@ import TinyCard from "../../Card/TinyCard/TinyCard";
 import { Link } from "react-router-dom";
 
 function TopStories({ setOrder,order }) {
-  //api fetch for section=news
+
   const handleSelectOrder = (selectedOrder) => {
     setOrder(selectedOrder);
   };

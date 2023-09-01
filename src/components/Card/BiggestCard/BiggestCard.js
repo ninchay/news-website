@@ -1,12 +1,13 @@
 import React from 'react'
 import './BiggestCard.css'
-import sevenPeaksPic from '../../../Assets/Images/Logo_White.png'
+import guardianPic from '../../../Assets/Images/guardian.jpeg'
 
 function BiggestCard({title,body,image}) {
   const cardStyle = {
-    backgroundImage: `url(${image || sevenPeaksPic})`, 
-    backgroundSize:'contain',
-    backgroundRepeat:'noRepeat'
+    backgroundImage: `url(${image || guardianPic})`, 
+    backgroundSize: '100% 79%',
+    backgroundRepeat:'noRepeat',
+    backgroundColor:'#061f48',
 };
 
 
